@@ -46,10 +46,14 @@ the case of lintr) not at all.
 
 styler was designed with flexibility in mind and hence offers an
 infrastructure that allows for a wide range of customization. In
-particular it can: \* style according to an arbitrary, user-defined
-style guide. \* handle tidy eval syntax properly (\!\!\! is not turned
-into \!(\!(\!…)). \* handle the pipe `%>%` properly (does not remove
-line breaks after it). \* handle non-R files (currently only .Rmd).
+particular it can: 
+
+* style according to an arbitrary, user-defined
+style guide. 
+* handle tidy eval syntax properly (\!\!\! is not turned
+into \!(\!(\!…)).
+* handle the pipe `%>%` properly (does not remove line breaks after it).
+* handle non-R files (currently only .Rmd).
 
 Given that styler already has a lot of benefits, it seems to make sense
 to further improve styler to become a comprehensive source code
