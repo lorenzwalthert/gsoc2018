@@ -48,8 +48,7 @@ styler was designed with flexibility in mind and hence offers an
 infrastructure that allows for a wide range of customization. In
 particular it can: 
 
-* style according to an arbitrary, user-defined
-style guide. 
+* style according to an arbitrary, user-defined style guide. 
 * handle tidy eval syntax properly (\!\!\! is not turned
 into \!(\!(\!…)).
 * handle the pipe `%>%` properly (does not remove line breaks after it).
@@ -81,24 +80,24 @@ in the GitHub repository of styler that were closed and labeled with
 “Status: Postponed” and are to be resolved at some point, better
 sooner than later. They can be grouped into the following categories:
 
-  - Infrastructure: Consistent naming (\#16), verification of styling
-    (\#140), removing NSE calls (\#199), tab conversion (\#213),
-    parallel styling (\#277), caching unchanged files for repeated
-    styling (\#320), use styler to cache code (\#343).
+  - Infrastructure: Consistent naming (#16), verification of styling
+    (\#140), removing NSE calls (\#199), tab conversion (#213),
+    parallel styling (#277), caching unchanged files for repeated
+    styling (#320), use styler to cache code (#343).
   - Edge cases and cases not yet covered in the tidyverse style guide
     (need to adapt tidyverse style guide in sync with these changes):
-    line breaks and curly braces / function declaration (\#124, \#125,
-    \#254), infix operators and indention (\#255), ensure new lines at
-    EOF (\#314).
-  - New rules styling rules: maximal character width (\#247), alignment
-    detection (\#258, \#317), adding curly braces to other than if
-    statements (\#286), remove comments (\#334), remove blank lines
-    (\#335).
-  - New functionality in terms of UI: corrupt code, unstyle code (\#22,
-    \#220), style from clipboard (\#122), use styler as a CI step
-    (\#302), store styler config in yml file (\#319), styling of roxygen
-    example code (\#332), support styling of unsaved .Rmd (\#339) ,
-    style syntactically invalid files (\#346).
+    line breaks and curly braces / function declaration (#124, #125,
+    #254), infix operators and indention (#255), ensure new lines at
+    EOF (#314).
+  - New rules styling rules: maximal character width (#247), alignment
+    detection (#258, #317), adding curly braces to other than if
+    statements (#286), remove comments (#334), remove blank lines
+    (#335).
+  - New functionality in terms of UI: corrupt code, unstyle code (#22,
+    #220), style from clipboard (#122), use styler as a CI step
+    (#302), store styler config in yml file (#319), styling of roxygen
+    example code (#332), support styling of unsaved .Rmd (#339) ,
+    style syntactically invalid files (#346).
 
 In terms of workload, the maximal character width, alignment detection
 and config integration are probably the most complex and time consuming.
@@ -110,10 +109,10 @@ one and two.
 
   - Implementing other style guides, in particular the base R style
     guide and the Google Style Guide as well as the style guides
-    suggested in \#340.
+    suggested in #340.
   - Implementing a more sophisticated Add-in in which (i) styling rules
     can be checked unchecked individually and (ii) the config yml can be
-    changed (\#319).
+    changed (#319).
 
 # Expected impact
 
@@ -144,9 +143,9 @@ Students, please do one or more of the following tests before contacting
 the mentors above. As far as the workflow goes:
 
   - fork the upstream repo (r-lib/styler).
-  - create a branch dedicated to the test named “\[your
-    name\]-\[difficulty\]” using dash separators and all lowercase
-    letters, e.g. if you are Jack Ben and you want to solve the easy
+  - create a branch dedicated to the test named "[your
+    name]-[difficulty]" using dash separators and all lowercase
+    letters, e.g. if you are Jack Ben and you want to solve the easy
     task, name your branch *jack-ben-easy*.
   - Then, submit a Pull Request (PR) to **your** own master branch of
     the fork and make sure all continuous integration tests pass
@@ -162,7 +161,7 @@ the mentors above. As far as the workflow goes:
     appropriate `roxygen` tag to remove documentation for these
     functions and make the change effective running
     `devtools::document()`. In your PR, reference the first comment from
-    @klrmlr in \#341. You can obtain the link by right clicking on the
+    @klrmlr in #341. You can obtain the link by right clicking on the
     “:x days ago” in the title of his comment “krlmlr commented :x
     days ago”.
   - Medium: Get familiar with the testing infrastructure used in styler.
@@ -173,7 +172,7 @@ the mentors above. As far as the workflow goes:
     what the problem was? Hint: To see the message displayed, you must
     make the test fail.
   - Hard: Resolve one of the issues labeled “Status: Postponed” and
-    “Complexity: Low”, e.g. \#199.
+    “Complexity: Low”, e.g. #199.
 
 # Solutions of tests
 
