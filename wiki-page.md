@@ -80,48 +80,44 @@ in the GitHub repository of styler that were closed and labeled with
 “Status: Postponed” and are to be resolved at some point, better
 sooner than later. They can be grouped into the following categories:
 
-  - Infrastructure: Consistent naming (#16), verification of styling
-    (\#140), removing NSE calls (\#199), tab conversion (#213),
-    parallel styling (#277), caching unchanged files for repeated
-    styling (#320), use styler to cache code (#343).
-  - Edge cases and cases not yet covered in the tidyverse style guide
-    (need to adapt tidyverse style guide in sync with these changes):
-    line breaks and curly braces / function declaration (#124, #125,
-    #254), infix operators and indention (#255), ensure new lines at
-    EOF (#314).
-  - New rules styling rules: maximal character width (#247), alignment
-    detection (#258, #317), adding curly braces to other than if
-    statements (#286), remove comments (#334), remove blank lines
-    (#335).
-  - New functionality in terms of UI: corrupt code, unstyle code (#22,
-    #220), style from clipboard (#122), use styler as a CI step
-    (#302), store styler config in yml file (#319), styling of roxygen
-    example code (#332), support styling of unsaved .Rmd (#339) ,
-    style syntactically invalid files (#346).
+- Infrastructure.
+- Edge cases and cases not yet covered in the tidyverse style guide
+  (need to adapt tidyverse style guide in sync with these changes):
+- New rules styling rules.
+- New functionality in terms of UI.
 
-In terms of workload, the maximal character width, alignment detection
-and config integration are probably the most complex and time consuming.
-However, before diving into that, we prefer to close a significant
-amount of the infrastructure and edge case issues listed under bullet
-one and two.
+Solving a few, easy-to-tackle postponed issuses (can be found via 
+label:"Complexity: Low" and label:"Status: Postponed") could help the student
+to get familar with the code base while starting to make some contributions to 
+the project.
 
 ## Further ideas
 
-  - Implementing other style guides, in particular the base R style
-    guide and the Google Style Guide as well as the style guides
-    suggested in #340.
-  - Implementing a more sophisticated Add-in in which (i) styling rules
-    can be checked unchecked individually and (ii) the config yml can be
-    changed (#319).
+There is quite a few ideas how styler could be improved or extended. Here
+are a few, sorted according to priority. However, we want the student to 
+have a say as well on what he wants to work on.
+
+- A mechanism to enforce a maximum width (e.g. 80 characters).
+- Implementing other style guides, in particular the base R style
+  guide and the Google Style Guide as well as the style guides
+  suggested in #340.
+- A Domain Specific Language (e.g. YAML-based) to store styling specification
+  of a project.
+- Implementing a more sophisticated Add-in in which styling rules
+  can be checked unchecked individually, allowing for a very custom styling.
+- Implementing an algorithm that can detect style given a code base (and 
+  potentially style guides to match it against).
+
 
 # Expected impact
 
-styler is a package that already benefits people today. Its initial CRAN
-release had about 800 direct downloads within the first 30 days and it
-will become a second-level dependency of devtools (via usethis) with the
-next devtools release. reprex (a tidyverse core package) allows the user
-to optionally style the code it processes and exampletestr uses styler
-to prettify code.
+styler is a package that already benefits people today, both package developer
+and end user. A consistent style is important, especially in collaborative 
+settings. The initial release of styler on CRAN had about 800 direct downloads 
+within the first 30 days and it will become a second-level dependency of 
+devtools (via usethis) with the next devtools release. 
+reprex (a tidyverse core package) allows the user to optionally style the code 
+it processes and exampletestr uses styler to prettify code.
 
 # Mentors
 
@@ -156,14 +152,10 @@ the mentors above. As far as the workflow goes:
 
 ## Actual tests
 
-  - Easy: We want to remove all `.Rd` documentation for unexported
-    functions but keep the source code of the documentation. Use the
-    appropriate `roxygen` tag to remove documentation for these
-    functions and make the change effective running
-    `devtools::document()`. In your PR, reference the first comment from
-    @klrmlr in #341. You can obtain the link by right clicking on the
-    “:x days ago” in the title of his comment “krlmlr commented :x
-    days ago”.
+  - Easy: Read the vignettes of the styler 
+    [pkgdown page](http://styler.r-lib.org/index.html). In your own words, 
+    examplain why an approach with a nested parse data structure was preferred 
+    over an approach with a flat parse structure.
   - Medium: Get familiar with the testing infrastructure used in styler.
     The workhorse functions are defined in R/serialized\_tests.R and
     pretty much every test uses it. The message sent to the console if
