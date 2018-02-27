@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+wiki-page.Rmd
+*.html
