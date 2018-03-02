@@ -83,7 +83,7 @@ sooner than later. They can be grouped into the following categories:
 - Infrastructure.
 - Edge cases and cases not yet covered in the tidyverse style guide
   (need to adapt tidyverse style guide in sync with these changes):
-- New rules styling rules.
+- New styling rules.
 - New functionality in terms of UI.
 
 Solving a few, easy-to-tackle postponed issuses (can be found via 
