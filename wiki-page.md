@@ -86,16 +86,15 @@ sooner than later. They can be grouped into the following categories:
 - New styling rules.
 - New functionality in terms of UI.
 
-Solving a few, easy-to-tackle postponed issuses (can be found via 
-label:"Complexity: Low" and label:"Status: Postponed") could help the student
-to get familar with the code base while starting to make some contributions to 
-the project.
+Solving a few, easy-to-tackle postponed issuses (can be found by filtering 
+issues by label) could help the student to get familar with the code base while
+starting to make some contributions to the project.
 
 ## Further ideas
 
 There is quite a few ideas how styler could be improved or extended. Here
-are a few, sorted according to priority. However, we want the student to 
-have a say as well on what he wants to work on.
+are a few, sorted according to priority. However, we'd like to encourage the 
+student to propose a road map.
 
 - A mechanism to enforce a maximum width (e.g. 80 characters).
 - Implementing other style guides, in particular the base R style
@@ -117,7 +116,8 @@ settings. The initial release of styler on CRAN had about 800 direct downloads
 within the first 30 days and it will become a second-level dependency of 
 devtools (via usethis) with the next devtools release. 
 reprex (a tidyverse core package) allows the user to optionally style the code 
-it processes and exampletestr uses styler to prettify code.
+it processes and exampletestr uses styler to prettify code. styler will also 
+soon be available for pretty printing of code rendered with knitr [yihui/knitr#1516](https://github.com/yihui/knitr/issues/1516).
 
 # Mentors
 
@@ -154,7 +154,7 @@ the mentors above. As far as the workflow goes:
 
   - Easy: Read the vignettes of the styler 
     [pkgdown page](http://styler.r-lib.org/index.html). In your own words, 
-    examplain why an approach with a nested parse data structure was preferred 
+    explain why an approach with a nested parse data structure was preferred 
     over an approach with a flat parse structure.
   - Medium: Get familiar with the testing infrastructure used in styler.
     The workhorse functions are defined in R/serialized\_tests.R and
